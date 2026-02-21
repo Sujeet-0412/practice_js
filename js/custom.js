@@ -15,7 +15,7 @@ function upDate(previewPic){
   
 	}
 
-	function unDo(){
+function unDo(){
      x = document.getElementById('image');
      x.style.color = "#FFFFFF";
      x.innerHTML = "Hover over an image below to display here.";
@@ -29,3 +29,16 @@ function upDate(previewPic){
     */
 		
 	}
+
+window.onload = function() {
+  let previews = document.querySelectorAll("img"); // or use a specific class
+  previews.forEach(function(pic) {
+    pic.setAttribute("tabindex", "0");   // make focusable
+    pic.addEventListener("focus", function() {
+      upDate(pic);
+    });
+    pic.addEventListener("blur", function() {
+      unDo();
+    });
+  });
+};
