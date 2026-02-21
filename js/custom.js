@@ -2,7 +2,7 @@
 
 function upDate(previewPic){
   x = document.getElementById('image');
-  x.style.color = "blue";
+  x.style.color = "#FFFFFF";
   x.innerHTML = previewPic.alt;
   x.style.backgroundImage = `url(${previewPic.src})`;
  /* In this function you should 
